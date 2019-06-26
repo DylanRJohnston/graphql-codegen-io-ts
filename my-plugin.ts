@@ -5,15 +5,12 @@ import {
   printSchema,
   parse,
   FieldDefinitionNode,
-  TypeNode,
-  EnumValueDefinitionNode
+  TypeNode
 } from "graphql";
 
 const assertNever = (impossible: never): never => {
   throw new Error(`Fuck ${impossible}`);
 };
-
-type Narrow<A, B> = A extends B ? A : never;
 
 const stub = () => "Not implimented";
 
